@@ -8,11 +8,11 @@ from mmseg.apis import inference_model, init_model, show_result_pyplot
 
 def main():
     parser = ArgumentParser()
-    # 位置参数：位置参数是指在命令行中按照预定顺序输入的参数
+    # 位置参数：是指在命令行中按照预定顺序输入的参数
     parser.add_argument('img', help='Image file')
     parser.add_argument('config', help='Config file')
     parser.add_argument('checkpoint', help='Checkpoint file')
-    # -或者--的是可选参数
+    # 可选参数：是指在命令行中前面有一个短横线（-）或者两个短横线（--）前缀，然后跟着参数名称和值
     parser.add_argument('--out-file', default=None, help='Path to output file')
     parser.add_argument(
         '--device', default='cuda:0', help='Device used for inference')
